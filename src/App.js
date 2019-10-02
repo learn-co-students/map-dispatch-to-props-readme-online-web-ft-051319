@@ -27,12 +27,14 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    addItem: () => {
-      dispatch(addItem())
-    }
-  }
-}
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     addItem: () => {
+//       dispatch(addItem())
+//     }
+//   }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+// connect() accepts a function OR an object as its second argument.
+// If we pass an object, connect() incorporates dispatch implicitly.
+export default connect(mapStateToProps, { addItem })(App);
