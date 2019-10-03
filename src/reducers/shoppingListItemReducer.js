@@ -11,7 +11,7 @@ export default function shoppingListItemReducer(state = {
       });
 
     default:
-      console.log(state)
+      console.log(state) 
       return state;
   }
 };
